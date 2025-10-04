@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schmidt Design Studios - Professional Web Design & Development</title>
+    
+    <!-- Color scheme from Coolors: https://coolors.co/palette/0d1321-1d2d44-3e5c76-748cab-f0ebd8 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #0d1321;
+            background-color: #f0ebd8;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0d1321, #1d2d44);
+            color: #f0ebd8;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #748cab;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #f0ebd8;
+            border: 3px solid #3e5c76;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            background-color: white;
+            box-shadow: 0 10px 25px rgba(13, 19, 33, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .content-wrapper {
+            padding: 3rem;
+        }
+
+        h2 {
+            color: #0d1321;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid #748cab;
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #1d2d44;
+            text-align: justify;
+        }
+
+        ul {
+            list-style: none;
+            margin: 2rem 0;
+            padding-left: 0;
+        }
+
+        li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: #3e5c76;
+        }
+
+        li::before {
+            content: "◆";
+            position: absolute;
+            left: 0;
+            color: #748cab;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        li:hover {
+            color: #0d1321;
+            transform: translateX(5px);
+            transition: all 0.3s ease;
+        }
+
+        .contact-block {
+            background: linear-gradient(135deg, #748cab, #3e5c76);
+            color: #f0ebd8;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .contact-block h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-item strong {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background-color: #0d1321;
+            color: #f0ebd8;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tagline {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #748cab;
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            color: #3e5c76;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .content-wrapper {
+                padding: 2rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo" alt="Schmidt Design Studios Logo">SDS</div>
+            <h1>Schmidt Design Studios</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <h2>Schmidt Design Studios Services</h2>
+            
+            <p>
+                At Schmidt Design Studios, we believe that exceptional web design goes beyond aesthetics—it's about creating digital experiences that resonate with your audience and drive meaningful engagement. Founded by Matt Schmidt, our boutique design firm specializes in crafting bespoke websites that perfectly balance form and function. We take pride in our collaborative approach, working closely with each client to understand their unique vision and translate it into compelling digital solutions that stand out in today's competitive landscape.
+            </p>
+
+            <ul>
+                <li>Custom responsive web design that looks stunning on all devices</li>
+                <li>Expert front-end development using the latest HTML5, CSS3, and JavaScript technologies</li>
+                <li>User experience (UX) optimization that converts visitors into customers</li>
+                <li>Search engine optimization (SEO) integration for maximum online visibility</li>
+                <li>Content management system implementation for easy website maintenance</li>
+                <li>E-commerce solutions that drive sales and enhance customer satisfaction</li>
+                <li>Brand identity development including logo design and visual guidelines</li>
+                <li>Website performance optimization for lightning-fast loading speeds</li>
+                <li>Ongoing support and maintenance to keep your site secure and up-to-date</li>
+                <li>Analytics integration and reporting to track your digital success</li>
+            </ul>
+
+            <p>
+                Whether you're a startup looking to make your mark or an established business ready to elevate your online presence, Schmidt Design Studios is committed to delivering solutions that exceed your expectations. We understand that every project is unique, which is why we offer personalized consultation and tailored strategies that align with your specific goals and budget. Let us transform your digital vision into reality with our proven expertise and unwavering attention to detail.
+            </p>
+
+            <div class="contact-block">
+                <h3>Ready to Start Your Project?</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>Email</strong>
+                        <span>matt@schmidtdesignstudios.co</span>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone</strong>
+                        <span>(704) 555-DESIGN</span>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Address</strong>
+                        <span>1247 Creative Boulevard<br>Charlotte, NC 28205</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="tagline">"Designing Tomorrow's Digital Experiences Today"</div>
+            <div class="copyright">© 2025 Schmidt Design Studios. All rights reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>
