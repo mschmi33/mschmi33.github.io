@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowboarding Passion</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e8ba3 100%);
+            color: #e8f1f5;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(15, 32, 56, 0.9);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            margin-top: 1.5rem;
+        }
+
+        nav a {
+            color: #94d2f5;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            margin: 0 0.5rem;
+            background: rgba(42, 82, 152, 0.6);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-weight: 600;
+            border: 2px solid transparent;
+        }
+
+        nav a:hover {
+            background: rgba(148, 210, 245, 0.3);
+            border-color: #94d2f5;
+            transform: translateY(-2px);
+        }
+
+        nav a:focus {
+            outline: 3px solid #94d2f5;
+            outline-offset: 2px;
+        }
+
+        .divider {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin: 0 0.3rem;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            color: #2c3e50;
+        }
+
+        section {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: #1e3c72;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #2a5298;
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+            color: #34495e;
+        }
+
+        figure {
+            margin: 2rem 0;
+            text-align: center;
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        figcaption {
+            margin-top: 1rem;
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+
+        figcaption .credit {
+            display: block;
+            font-style: italic;
+            color: #555;
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+            font-weight: 400;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+
+        .card {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #2a5298;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #f5f5f5;
+        }
+
+        .form-container {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        input, textarea, select {
+            padding: 0.75rem;
+            margin-bottom: 1.5rem;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #2a5298;
+        }
+
+        button {
+            background: #2a5298;
+            margin-left: -195px;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #1e3c72;
+        }
+
+        ul {
+            list-style-position: inside;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            color: #34495e;
+        }
+
+        footer {
+            background: rgba(15, 32, 56, 0.9);
+            color: #e8f1f5;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: #94d2f5;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        footer p {
+            color: #e8f1f5;
+            margin: 0.5rem 0;
+        }
+
+        .prompt-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .prompt-box strong {
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Snowboarding</h1>
+        <nav>
+            <a href="#what">What</a>
+            <span class="divider">❄️</span>
+            <a href="#who">Who</a>
+            <span class="divider">❄️</span>
+            <a href="#when">When</a>
+            <span class="divider">❄️</span>
+            <a href="#where">Where</a>
+            <span class="divider">❄️</span>
+            <a href="#how">How</a>
+            <span class="divider">❄️</span>
+            <a href="#why">Why</a>
+            <span class="divider">❄️</span>
+            <a href="#ai">AI Prompts</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="what" class="active">
+            <h2>What is Snowboarding?</h2>
+            <p>Snowboarding is an exhilarating winter sport that combines surfing, skateboarding, and skiing into one incredible mountain experience. Riders strap both feet onto a single board and carve their way down snow-covered slopes, performing tricks, navigating terrain parks, or simply enjoying the freedom of gliding through fresh powder.</p>
+
+            <figure>
+                <img src="images/snowboarding.jpg" alt="Snowboarder carving down the mountain." width="800" height="600">
+                <figcaption>
+                    A snowboarder carving down the mountain.
+                    <span class="credit">Image Credits: www.freeimages.com</span>
+                </figcaption>
+            </figure>
+
+            <div class="content-grid">
+                <div class="card">
+                    <h3>Freestyle</h3>
+                    <p>Freestyle snowboarding focuses on tricks, jumps, and aerial maneuvers. Riders use terrain parks with rails, boxes, and halfpipes to showcase their creativity and technical skills.</p>
+                </div>
+                <div class="card">
+                    <h3>Freeride</h3>
+                    <p>Freeride is all about exploring the mountain freely, riding through trees, powder, and natural terrain. It emphasizes style, flow, and connection with the mountain environment.</p>
+                </div>
+                <div class="card">
+                    <h3>Alpine</h3>
+                    <p>Alpine snowboarding, or carving, involves making precise turns at high speeds on groomed runs. Riders use hard boots and specially designed boards for maximum control.</p>
+                </div>
+            </div>
+
+            <p>The sport originated in the 1960s and has evolved into one of the most popular winter activities worldwide, with millions of enthusiasts hitting the slopes every season. From beginners learning their first turns to professionals competing in the Olympics, snowboarding offers challenges and rewards for every skill level.</p>
+
+            <figure>
+                <img src="images/snowboard-essentials.jpg" alt="Snowboard equipment laid out" width="800" height="600">
+                <figcaption>
+                    Essential snowboarding equipment
+                    <span class="credit">Image Credits: https://www.the-house.com/portal/snowboarding-essentials-for-beginners/</span>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section id="who">
+            <h2>Who I Am</h2>
+            <p>I'm a passionate snowboarder who discovered this incredible sport seven years ago and haven't looked back since. What started as a casual weekend activity has transformed into a lifestyle that shapes my winters and fuels my adventures. I've progressed from nervously sliding down bunny slopes to confidently tackling black diamonds and exploring backcountry terrain.</p>
+
+            <figure>
+                <img src="images/Who.jpg" alt="Snowboarder standing at mountain peak with board" width="800" height="600">
+                <figcaption>
+                    At the summit, ready for the next run
+                    <span class="credit">Image Credits: Me</span>
+                </figcaption>
+            </figure>
+
+            <p>My journey began on a spontaneous trip to the mountains with friends. Despite countless falls during that first day, something clicked. The feeling of finally linking turns together, the crisp mountain air, and the supportive snowboarding community drew me in completely. Since then, I've invested in quality gear, taken lessons to refine my technique, and traveled to various resorts across the country.</p>
+
+            <div class="content-grid">
+                <div class="card">
+                    <h3>Riding Style</h3>
+                    <p>I prefer all-mountain freeride snowboarding with occasional ventures into the freestyle terrain park. My focus is on exploring diverse terrain and improving my technique on challenging runs.</p>
+                </div>
+                <div class="card">
+                    <h3>Experience Level</h3>
+                    <p>Advanced intermediate rider comfortable on most terrain. Currently working on mastering switch riding and building confidence in double black diamonds and back side runs.</p>
+                </div>
+                <div class="card">
+                    <h3>Season Goals</h3>
+                    <p>This season I'm aiming to complete 50 days on the mountain, achieve consistent jumps in the halfpipe, and explore three new resorts I've never visited before.</p>
+                </div>
+            </div>
+
+            <p>Beyond just riding, I love being immersed in the mountain environment itself. There's something special about being surrounded by alpine landscapes, quiet forests, and the peaceful beauty of winter. The crisp mountain air, the hush after fresh snowfall, and watching weather patterns move across the peaks all remind me why I'm drawn to these places. This connection has given me a deeper appreciation for these natural spaces and makes me want to help protect them. Snowboarding isn't just a hobby for me; it's a passion that has shaped how I see nature, where I choose to travel, and how I approach life.</p>
+        </section>
+
+        <section id="when">
+            <h2>When to Ride</h2>
+            <p>Timing your snowboarding adventures correctly can make the difference between an amazing day on the mountain and a frustrating experience. Understanding seasonal patterns, daily conditions, and optimal riding times helps maximize your enjoyment and safety on the slopes.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Season</th>
+                        <th>Conditions</th>
+                        <th>Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Early Season (Nov-Dec)</td>
+                        <td>Variable coverage, icy patches, fewer crowds</td>
+                        <td>Getting legs back, season pass holders, less expensive tickets</td>
+                    </tr>
+                    <tr>
+                        <td>Peak Season (Jan-Feb)</td>
+                        <td>Best snow depth, coldest temps, most crowds</td>
+                        <td>Powder days, backcountry access, consistent conditions</td>
+                    </tr>
+                    <tr>
+                        <td>Late Season (Mar-Apr)</td>
+                        <td>Warmer weather, corn snow, longer days</td>
+                        <td>Spring riding, park sessions, relaxed atmosphere</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <figure>
+                <img src="https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=800&h=600&fit=crop" alt="Snowboarder riding at sunset with orange sky" width="800" height="600">
+                <figcaption>
+                    Evening riding during golden hour
+                    <span class="credit">AI Prompt: "Snowboarder silhouette riding at sunset, orange and pink sky, mountain backdrop, peaceful scene, golden hour lighting"</span>
+                </figcaption>
+            </figure>
+
+            <div class="content-grid">
+                <div class="card">
+                    <h3>Weekdays vs Weekends</h3>
+                    <p>Weekdays offer significantly fewer crowds and shorter lift lines. If your schedule allows, Tuesday through Thursday provides the best combination of maintained runs and manageable crowds.</p>
+                </div>
+                <div class="card">
+                    <h3>Time of Day</h3>
+                    <p>First tracks in the morning offer groomed corduroy perfection. Afternoons bring softer snow but more crowded runs. Late afternoon sessions provide amazing light and thinning crowds.</p>
+                </div>
+                <div class="card">
+                    <h3>Weather Windows</h3>
+                    <p>The day after a storm often provides the best powder riding. Check forecasts for incoming weather systems and plan your trips around fresh snowfall for epic conditions.</p>
+                </div>
+            </div>
+
+            <p>Pay attention to mountain reports for opening times, special events, and grooming schedules. Many resorts offer night riding under lights, which provides a unique experience with typically lighter crowds. Storm cycles in January and February bring the deepest powder, while spring riding in March and April offers longer days, warmer temperatures, and a more relaxed vibe perfect for progressing your skills.</p>
+
+            <p>For the ultimate experience, consider planning multi-day trips during midweek periods following major snowstorms. This strategy combines the best conditions with fewer crowds, allowing you to maximize your time on the mountain and fully immerse yourself in the snowboarding lifestyle.</p>
+        </section>
+
+        <section id="where">
+            <h2>Where to Ride</h2>
+            <p>The world offers countless incredible destinations for snowboarding, from massive resort complexes to remote backcountry zones. Choosing the right location depends on your skill level, riding style, budget, and the type of experience you're seeking. Here are some of the best places to explore on your snowboard.</p>
+
+            <figure>
+                <img src="images/PC_overview-min1.jpg" alt="Mountain resort village with ski lifts and snow covered peaks" width="800" height="600">
+                <figcaption>
+                    Park City, Utah
+                    <span class="credit">Image Credits: https://snowbrains.com/hometown-mountain-shoutout-park-city-ut</span>
+                </figcaption>
+            </figure>
+
+            <div class="content-grid">
+                <div class="card">
+                    <h3>Colorado Rockies</h3>
+                    <p>Home to legendary resorts like Vail, Breckenridge, and Aspen. Offers high-altitude terrain, consistent snowfall, and over 300 days of sunshine. Perfect for all skill levels with extensive terrain parks and backcountry access.</p>
+                </div>
+                <div class="card">
+                    <h3>Pacific Northwest</h3>
+                    <p>Whistler Blackcomb in British Columbia and Mount Baker in Washington deliver epic powder dumps. Known for deep snow, challenging terrain, and a thriving snowboard culture. Ideal for advanced riders seeking adventure.</p>
+                </div>
+                <div class="card">
+                    <h3>Utah</h3>
+                    <p>Claims "The Greatest Snow on Earth" with resorts like Park City, Alta, and Snowbird. Features incredibly light, dry powder and diverse terrain. Excellent for powder enthusiasts and those seeking quality over crowds.</p>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Location Type</th>
+                        <th>Characteristics</th>
+                        <th>Recommended For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Large Resorts</td>
+                        <td>Multiple peaks, extensive facilities, varied terrain</td>
+                        <td>All levels, families, week-long trips</td>
+                    </tr>
+                    <tr>
+                        <td>Local Mountains</td>
+                        <td>Affordable, less crowded, community atmosphere</td>
+                        <td>Regular riders, season pass holders, weeknight sessions</td>
+                    </tr>
+                    <tr>
+                        <td>Backcountry Zones</td>
+                        <td>Ungroomed, pristine snow, requires avalanche training</td>
+                        <td>Advanced riders, powder seekers, adventure enthusiasts</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>International destinations like Japan's Niseko region, the European Alps, and New Zealand's Southern Alps offer unique experiences for traveling snowboarders. Each location provides distinctive snow conditions, cultural experiences, and terrain characteristics that can expand your riding horizons and create unforgettable memories.</p>
+
+            <figure>
+                <img src="images/powder-backcountry.jpg" alt="Remote mountain backcountry with deep powder snow" width="800" height="600">
+                <figcaption>
+                    Untouched backcountry terrain
+                    <span class="credit">Image Credits: Powder Magazine</span>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section id="how">
+            <h2>How to Get Started</h2>
+            <p>Beginning your snowboarding journey can feel overwhelming, but with the right approach, you'll be carving down slopes sooner than you think. Here's a comprehensive guide to help you start on the right foot (or board) and progress safely and effectively.</p>
+
+            <div class="content-grid">
+                <div class="card">
+                    <h3>Step 1: Take Lessons</h3>
+                    <p>Professional instruction is crucial for learning proper technique and avoiding bad habits. Most resorts offer beginner packages that include equipment rental, lift tickets, and instruction. Group lessons are affordable, while private lessons provide personalized attention.</p>
+                </div>
+                <div class="card">
+                    <h3>Step 2: Get the Right Gear</h3>
+                    <p>Start by renting equipment to understand your preferences before purchasing. Essential items include a snowboard, boots, bindings, helmet, goggles, and appropriate clothing. Don't skimp on safety equipment like helmets and wrist guards.</p>
+                </div>
+                <div class="card">
+                    <h3>Step 3: Practice Fundamentals</h3>
+                    <p>Master basic skills before attempting advanced terrain. Focus on falling safely, standing up, skating, sliding, and making controlled turns. Spend adequate time on beginner slopes building confidence and muscle memory.</p>
+                </div>
+            </div>
+
+            <figure>
+                <img src="images/snowboarding-school.jpg" alt="Snowboarding instructor teaching beginner student" width="800" height="600">
+                <figcaption>
+                    Learning the basics with an instructor
+                    <span class="credit">Image Credits: Pixabay</span>
+                </figcaption>
+            </figure>
+
+            <div class="form-container">
+                <h3>Ready to Start? Contact a Local School</h3>
+                <form>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="experience">Experience Level:</label>
+                    <select id="experience" name="experience" required>
+                        <option value="">Select your level</option>
+                        <option value="never">Never been on a board</option>
+                        <option value="beginner">Beginner (1-3 days)</option>
+                        <option value="intermediate">Intermediate (can link turns)</option>
+                        <option value="advanced">Advanced (comfortable on all terrain)</option>
+                    </select>
+
+                    <label for="goals">What are your goals?</label>
+                    <textarea id="goals" name="goals" rows="4" placeholder="Tell us what you'd like to achieve this season..."></textarea>
+
+                    <button type="submit">Request Information</button>
+                </form>
+            </div>
+
+            <p><strong>Key tips for beginners:</strong></p>
+            <ul>
+                <li>Expect to fall frequently during your first few days—it's part of the learning process</li>
+                <li>Build physical fitness before your trip with exercises targeting core strength and leg endurance</li>
+                <li>Stay hydrated and take breaks to avoid exhaustion and injury</li>
+                <li>Start with your dominant foot forward (regular stance) unless you naturally feel more comfortable with the opposite</li>
+                <li>Watch instructional videos between sessions to reinforce concepts</li>
+                <li>Be patient with yourself—most people need 3-5 days to feel comfortable linking turns</li>
+            </ul>
+
+            <figure>
+                <img src="images/snowboarding-gear.jpg" alt="Snowboard gear laid out including board boots bindings" width="800" height="600">
+                <figcaption>
+                    Essential snowboarding equipment
+                    <span class="credit">Image Credits: Pixabay</span>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section id="why">
+            <h2>Why I Love Snowboarding</h2>
+            <p>Snowboarding transcends being just a sport—it's a passion that has fundamentally changed my life for the better. The reasons I continue to pursue this activity season after season go far beyond the simple act of sliding down a mountain. Here's what makes snowboarding so incredibly meaningful to me.</p>
+
+            <figure>
+                <img src="images/snowboarding-3176182_1280.jpg" alt="Snowboarder bombing a jump" width="800" height="600">
+                <figcaption>
+                    Pure joy on the mountain
+                    <span class="credit">Image Credits: Pixabay</span>
+                </figcaption>
+            </figure>
+
+            <div class="content-grid">
+                <div class="card">
+                    <h3>Freedom and Flow</h3>
+                    <p>There's an indescribable feeling when you link perfect turns down a mountain. Time seems to slow down, your mind clears of distractions, and you enter a flow state where nothing exists except you, your board, and the mountain. This meditative quality provides mental clarity I can't find anywhere else.</p>
+                </div>
+                <div class="card">
+                    <h3>Connection with Nature</h3>
+                    <p>Snowboarding places you directly in some of Earth's most beautiful environments. Standing at a summit at sunrise, riding through pristine forests, and experiencing mountain weather firsthand creates a deep appreciation for nature and motivates me to protect these incredible places.</p>
+                </div>
+                <div class="card">
+                    <h3>Community and Culture</h3>
+                    <p>The snowboarding community embraces an inclusive, supportive culture. Whether you're helping a stranger who fell or sharing beta about powder stashes, there's a camaraderie that transcends age, background, and skill level. I've made lifelong friends through this sport.</p>
+                </div>
+            </div>
+
+            <p>Snowboarding continuously challenges me to grow. Each season brings new goals to pursue, whether mastering a new trick, exploring more technical terrain, or simply becoming more consistent. This constant progression keeps me motivated and engaged. The sport teaches valuable life lessons about persistence, overcoming fear, and celebrating small victories along the journey toward larger achievements.</p>
+
+            <p>Physical and mental health benefits are substantial. Snowboarding provides exceptional exercise, building strength, endurance, balance, and coordination. The mental health aspects are equally important—time in the mountains reduces stress, improves mood, and offers a healthy escape from daily pressures. After a day on the slopes, I consistently feel recharged, accomplished, and grateful.</p>
+
+            <figure>
+                <img src="images/snowboarders.jpg" alt="Group of snowboarders together on mountain" width="800" height="600">
+                <figcaption>
+                    Sharing the slope with friends
+                    <span class="credit">Image Credits: Pixabay</span>
+                </figcaption>
+            </figure>
+
+            <p>Finally, snowboarding provides adventure and exploration opportunities. Planning trips to new mountains, discovering hidden lines, and exploring backcountry zones satisfies my need for adventure. Each mountain offers unique challenges and characteristics, ensuring I never run out of new experiences. This aspect keeps the sport fresh and exciting year after year, decade after decade.</p>
+        </section>
+
+        <section id="ai">
+            <h2>AI Prompts Used</h2>
+            <p>This website was created with assistance from AI tools. Below are the prompts used for generating code and content.</p>
+
+            <div class="prompt-box">
+                <strong>Initial Website Structure:</strong>
+                <p>"Create a single-page website about snowboarding with multiple sections (What, Who, When, Where, How, Why, AI Prompts) that appear as different pages. Use embedded CSS, make it validate HTML/CSS/accessibility, follow CRAP principles with a blue/white color scheme different from standard blues. Include navigation that shows/hides sections, use snowflake emoji as divider. Each section needs h2 heading, at least 3 items, and at least one figure with image and caption."</p>
+            </div>
+
+            <div class="prompt-box">
+                <strong>Styling Enhancements:</strong>
+                <p>"Improve the visual design with a gradient background using blues, add cards for content organization, create hover effects on navigation and cards, add a table for seasonal information, include a contact form in the How section, and ensure all text has good contrast for accessibility."</p>
+            </div>
+
+            <div class="prompt-box">
+                <strong>JavaScript Functionality:</strong>
+                <p>"Add JavaScript to handle navigation between sections, showing only the active section and hiding others. Default to showing the 'What' section on page load. Add smooth animations when switching between sections."</p>
+            </div>
+
+            <div class="prompt-box">
+                <strong>Accessibility Improvements:</strong>
+                <p>"Ensure all interactive elements have proper focus states, color contrast meets WCAG standards, and navigation is keyboard accessible."</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            <a href="https://validator.w3.org/nu/?doc=YOUR_URL" target="_blank">HTML Validation</a> |
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=YOUR_URL_HERE" target="_blank">CSS Validation</a> |
+            <a href="https://wave.webaim.org/report#/YOUR_URL_HERE" target="_blank">Accessibility Check</a>
+        </p>
+        <p>Site designed by <a href="../schmidtbydesign.com/index.html">Schmidt by Design &copy;</a></p>
+    </footer>
+
+    <script>
+        // Navigation functionality to show/hide sections
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav a');
+            const sections = document.querySelectorAll('section');
+
+            // Function to show a specific section
+            function showSection(targetId) {
+                sections.forEach((section) => {
+                    section.classList.remove('active');
+                });
+                
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                    // Scroll to top of main content
+                    document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+
+            // Add click event listeners to navigation links
+            navLinks.forEach((link) => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    showSection(targetId);
+                    
+                    // Update URL hash without jumping
+                    history.pushState(null, null, targetId);
+                });
+            });
+
+            // Handle browser back/forward buttons
+            window.addEventListener('popstate', function() {
+                const hash = window.location.hash || '#what';
+                showSection(hash);
+            });
+
+            // Show section based on URL hash on page load
+            const initialHash = window.location.hash || '#what';
+            showSection(initialHash);
+
+            // Form submission handler (prevent actual submission for demo)
+            const form = document.querySelector('form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your interest! In a real implementation, this would send your information to a snowboard school.');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
