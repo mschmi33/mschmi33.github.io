@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matt Schmidt's Mellow Sable || ITSC3135 Introduction Form</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="scripts/introduction.js"></script>
+    <script src="scripts/header-footer.js"></script>
+</head>
+<body>
+    <header id="header-placeholder">
+    </header>
+
+    <main>
+        <h2>Introduction Form</h2>
+        <h3>Please submit the form below.</h3>
+
+        <form id="introForm">
+            <!-- Personal Information Section -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <label for="firstName">First Name: <span class="required">*</span></label>
+                <input type="text" id="firstName" name="firstName" value="Matt" placeholder="Enter your first name" required>
+                
+                <label for="middleName">Middle Name/Initial: <span class="optional">(optional)</span></label>
+                <input type="text" id="middleName" name="middleName" value="" placeholder="Enter your middle name or initial">
+                
+                <label for="nickname">Nickname/Preferred Name: <span class="optional">(optional)</span></label>
+                <input type="text" id="nickname" name="nickname" value="" placeholder="Enter your preferred name">
+                
+                <label for="lastName">Last Name: <span class="required">*</span></label>
+                <input type="text" id="lastName" name="lastName" value="Schmidt" placeholder="Enter your last name" required>
+            </fieldset>
+
+            <!-- Acknowledgment Section -->
+            <fieldset>
+                <legend>Acknowledgment</legend>
+                
+                <label for="acknowledgment">Acknowledgment Statement: <span class="required">*</span></label>
+                <textarea id="acknowledgment" name="acknowledgment" rows="3" placeholder="Enter your acknowledgment statement" required>I, Matt Schmidt, acknowledge that all work submitted is my own and I followed proper academic integrity guidelines.</textarea>
+                
+                <label for="acknowledgmentDate">Acknowledgment Date: <span class="required">*</span></label>
+                <input type="date" id="acknowledgmentDate" name="acknowledgmentDate" value="2025-10-27" required>
+            </fieldset>
+
+            <!-- Mascot Section -->
+            <fieldset>
+                <legend>Mascot Information</legend>
+                
+                <label for="mascotAdj">Mascot Adjective: <span class="required">*</span></label>
+                <input type="text" id="mascotAdj" name="mascotAdj" value="Mellow" placeholder="Enter a descriptive adjective" required>
+                
+                <label for="mascotAnimal">Mascot Animal: <span class="required">*</span></label>
+                <input type="text" id="mascotAnimal" name="mascotAnimal" value="Sable" placeholder="Enter an animal name" required>
+                
+                <label for="divider">Divider Character: <span class="required">*</span></label>
+                <input type="text" id="divider" name="divider" value="||" placeholder="Enter a divider (e.g., ~, |, ♥️)" maxlength="3" required>
+            </fieldset>
+
+            <!-- Image Section -->
+            <fieldset>
+                <legend>Profile Image</legend>
+                
+                <label for="imageUrl">Picture URL: <span class="required">*</span></label>
+                <input type="url" id="imageUrl" name="imageUrl" value="images/IntroPic.jpg" placeholder="Enter image URL or path" required>
+                
+                <label for="imageCaption">Picture Caption: <span class="required">*</span></label>
+                <input type="text" id="imageCaption" name="imageCaption" value="Snowboarding in Park City" placeholder="Enter a caption for your image" required>
+            </fieldset>
+
+            <!-- Personal Statement Section -->
+            <fieldset>
+                <legend>About You</legend>
+                
+                <label for="personalStatement">Personal Statement: <span class="required">*</span></label>
+                <textarea id="personalStatement" name="personalStatement" rows="4" placeholder="Write a brief statement about yourself" required>Hello, my name is Matt Schmidt and I'm a senior studying computer science with a concentration in cybersecurity. I'm originally from Richmond Indiana but moved to Charlotte right before high school. After graduation, I'm hoping to get a job as a pen tester.</textarea>
+            </fieldset>
+
+            <!-- Background Information Section -->
+            <fieldset>
+                <legend>Background Information</legend>
+                
+                <label for="bullet1">Personal Background: <span class="required">*</span></label>
+                <input type="text" id="bullet1" name="bullet1" value="Some of my hobbies include skateboarding, rock climbing, and playing video games, specifically fighting games." placeholder="Enter personal background" required>
+                
+                <label for="bullet2">Professional Background: <span class="required">*</span></label>
+                <input type="text" id="bullet2" name="bullet2" value="I've worked at Hawthornes Italian Kitchen for 2 years now and worked at the Fig Tree 2 years before that." placeholder="Enter professional background" required>
+                
+                <label for="bullet3">Academic Background: <span class="required">*</span></label>
+                <input type="text" id="bullet3" name="bullet3" value="Senior, Class of 2026 - Computer Science major Cybersecurity concentration." placeholder="Enter academic background" required>
+                
+                <label for="bullet4">Fun Fact: <span class="required">*</span></label>
+                <input type="text" id="bullet4" name="bullet4" value="I've been playing Marimba for 8 years." placeholder="Enter an interesting fact" required>
+            </fieldset>
+
+            <!-- Courses Section -->
+            <fieldset>
+                <legend>Current Courseload</legend>
+                <div id="coursesContainer">
+                    <div class="course-entry">
+                        <h4>Course 1</h4>
+                        <label>Department: <span class="required">*</span></label>
+                        <input type="text" class="courseDept" placeholder="e.g., ITIS" value="ITIS" required>
+                        
+                        <label>Number: <span class="required">*</span></label>
+                        <input type="text" class="courseNum" placeholder="e.g., 3135" value="3135" required>
+                        
+                        <label>Name: <span class="required">*</span></label>
+                        <input type="text" class="courseName" placeholder="e.g., Web Development" value="Front End Web Development" required>
+                    </div>
+                    
+                    <div class="course-entry">
+                        <h4>Course 2</h4>
+                        <label>Department: <span class="required">*</span></label>
+                        <input type="text" class="courseDept" placeholder="e.g., ITIS" value="ITSC" required>
+                        
+                        <label>Number: <span class="required">*</span></label>
+                        <input type="text" class="courseNum" placeholder="e.g., 3135" value="3146" required>
+                        
+                        <label>Name: <span class="required">*</span></label>
+                        <input type="text" class="courseName" placeholder="e.g., Web Development" value="Intro to Operating Systems and Networking" required>
+                        
+                        <button type="button" class="deleteCourseBtn">Delete Course</button>
+                    </div>
+                    
+                    <div class="course-entry">
+                        <h4>Course 3</h4>
+                        <label>Department: <span class="required">*</span></label>
+                        <input type="text" class="courseDept" placeholder="e.g., ITIS" value="ITIS" required>
+                        
+                        <label>Number: <span class="required">*</span></label>
+                        <input type="text" class="courseNum" placeholder="e.g., 3135" value="3200" required>
+                        
+                        <label>Name: <span class="required">*</span></label>
+                        <input type="text" class="courseName" placeholder="e.g., Web Development" value="Intro to Info Security & Privacy" required>
+                        
+                        <button type="button" class="deleteCourseBtn">Delete Course</button>
+                    </div>
+                    
+                    <div class="course-entry">
+                        <h4>Course 4</h4>
+                        <label>Department: <span class="required">*</span></label>
+                        <input type="text" class="courseDept" placeholder="e.g., ITIS" value="ITIS" required>
+                        
+                        <label>Number: <span class="required">*</span></label>
+                        <input type="text" class="courseNum" placeholder="e.g., 3135" value="3130" required>
+                        
+                        <label>Name: <span class="required">*</span></label>
+                        <input type="text" class="courseName" placeholder="e.g., Web Development" value="Intro to Human-Centered Computing" required>
+                        
+                        <button type="button" class="deleteCourseBtn">Delete Course</button>
+                    </div>
+                    
+                    <div class="course-entry">
+                        <h4>Course 5</h4>
+                        <label>Department: <span class="required">*</span></label>
+                        <input type="text" class="courseDept" placeholder="e.g., ITIS" value="ITIS" required>
+                        
+                        <label>Number: <span class="required">*</span></label>
+                        <input type="text" class="courseNum" placeholder="e.g., 3135" value="4214" required>
+                        
+                        <label>Name: <span class="required">*</span></label>
+                        <input type="text" class="courseName" placeholder="e.g., Web Development" value="Usable Security and Privacy" required>
+                        
+                        <button type="button" class="deleteCourseBtn">Delete Course</button>
+                    </div>
+                </div>
+                <button type="button" id="addCourseBtn">Add Another Course</button>
+            </fieldset>
+
+            <!-- Quote Section -->
+            <fieldset>
+                <legend>Favorite Quote</legend>
+                
+                <label for="quote">Quote: <span class="required">*</span></label>
+                <textarea id="quote" name="quote" rows="2" placeholder="Enter your favorite quote" required>The only way to do great work is to love what you do.</textarea>
+                
+                <label for="quoteAuthor">Quote Author: <span class="required">*</span></label>
+                <input type="text" id="quoteAuthor" name="quoteAuthor" value="Steve Jobs" placeholder="Enter the author's name" required>
+            </fieldset>
+
+            <!-- Optional Fun Section -->
+            <fieldset>
+                <legend>Fun Extras (Optional)</legend>
+                
+                <label for="funnyThing">Something Funny: <span class="optional">(optional)</span></label>
+                <textarea id="funnyThing" name="funnyThing" rows="2" placeholder="Share something funny"></textarea>
+                
+                <label for="shareItem">Something I'd Like to Share: <span class="optional">(optional)</span></label>
+                <textarea id="shareItem" name="shareItem" rows="2" placeholder="Share anything you'd like"></textarea>
+            </fieldset>
+
+            <!-- Links Section -->
+            <fieldset>
+                <legend>Your Links</legend>
+                
+                <label for="link1Name">Link 1 Name: <span class="optional">*</span></label>
+                <input type="text" id="link1Name" name="link1Name" value="Charlotte.edu" placeholder="Link name" required>
+                <label for="link1Url">Link 1 URL: <span class="optional">*</span></label>
+                <input type="url" id="link1Url" name="link1Url" value="https://webpages.uncc.edu/mschmi33" placeholder="https://" required>
+                
+                <label for="link2Name">Link 2 Name: <span class="optional">*</span></label>
+                <input type="text" id="link2Name" name="link2Name" value="GitHub" placeholder="Link name" required>
+                <label for="link2Url">Link 2 URL: <span class="optional">*</span></label>
+                <input type="url" id="link2Url" name="link2Url" value="https://github.com/mschmi33" placeholder="https://" required>
+                
+                <label for="link3Name">Link 3 Name: <span class="optional">*</span></label>
+                <input type="text" id="link3Name" name="link3Name" value="GitHub.io" placeholder="Link name" required>
+                <label for="link3Url">Link 3 URL: <span class="optional">*</span></label>
+                <input type="url" id="link3Url" name="link3Url" value="https://mschmi33.github.io" placeholder="https://" required>
+                
+                <label for="link4Name">Link 4 Name: <span class="optional">*</span></label>
+                <input type="text" id="link4Name" name="link4Name" value="FreeCodeCamp" placeholder="Link name" required>
+                <label for="link4Url">Link 4 URL: <span class="optional">*</span></label>
+                <input type="url" id="link4Url" name="link4Url" value="https://www.freecodecamp.org/mschmi33" placeholder="https://" required>
+                
+                <label for="link5Name">Link 5 Name: <span class="optional">*</span></label>
+                <input type="text" id="link5Name" name="link5Name" value="Codecademy" placeholder="Link name" required>
+                <label for="link5Url">Link 5 URL: <span class="optional">*</span></label>
+                <input type="url" id="link5Url" name="link5Url" value="https://www.codecademy.com/profiles/mschmi33" placeholder="https://" required>
+                
+                <label for="link6Name">Link 6 Name: <span class="optional">*</span></label>
+                <input type="text" id="link6Name" name="link6Name" value="LinkedIn" placeholder="Link name" required>
+                <label for="link6Url">Link 6 URL: <span class="optional">*</span></label>
+                <input type="url" id="link6Url" name="link6Url" value="https://www.linkedin.com/in/mschmi33" placeholder="https://" required>
+                
+                <label for="link7Name">Link 7 Name: <span class="optional">*</span></label>
+                <input type="text" id="link7Name" name="link7Name" value="Crapp Website" placeholder="Link name" required>
+                <label for="link7Url">Link 7 URL: <span class="optional">*</span></label>
+                <input type="url" id="link7Url" name="link7Url" value="stuff/CraPp && webSite.html" placeholder="https://" required>
+                
+                <label for="link8Name">Link 8 Name: <span class="optional">*</span></label>
+                <input type="text" id="link8Name" name="link8Name" value="Mellow Sable" placeholder="Link name" required>
+                <label for="link8Url">Link 8 URL: <span class="optional">*</span></label>
+                <input type="url" id="link8Url" name="link8Url" value="mellowsable.com/index.html" placeholder="https://" required>
+            </fieldset>
+
+            <!-- Form Buttons -->
+            <div class="form-buttons">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <button type="button" id="clearBtn">Clear</button>
+            </div>
+        </form>
+
+        <!-- Results will be displayed here after submission -->
+        <div id="results" style="display: none;"></div>
+    </main>
+
+    <footer id="footer-placeholder">
+    </footer>
+</body>
+</html>
